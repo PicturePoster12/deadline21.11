@@ -21,9 +21,9 @@ class Laba
             }
         }
 
+        Console.WriteLine("4.2");
         try 
         {
-            Console.WriteLine("4.2");
             Console.WriteLine("Введите число от 1 до 365:");
             int monthDays2 = Convert.ToInt32(Console.ReadLine());
             if (monthDays2 > 0 & monthDays2 < 366)
@@ -50,10 +50,10 @@ class Laba
         {
             Console.WriteLine("Неверный ввод");
         }
-        
+
+        Console.WriteLine("dz4.1");
         try
         {
-            Console.WriteLine("dz4.1");
             Console.WriteLine("Введите год:");
             int god = Convert.ToInt32(Console.ReadLine());
             if (god % 4 == 0 & (god % 100 != 0 | god % 400 == 0))
