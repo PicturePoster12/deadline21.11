@@ -13,6 +13,14 @@ class Program
     }
     static void Main()
     {
+        Task1();
+        Task2();
+        Task3();
+        Task4();
+        Task5();
+    }
+    static void Task1()
+    {
         Console.WriteLine("1.");
         try
         {
@@ -50,7 +58,9 @@ class Program
         {
             Console.WriteLine("Неверный ввод");
         }
-
+    }
+    static void Task2()
+    {
         Console.WriteLine("2.");
         try
         {
@@ -64,24 +74,15 @@ class Program
             {
                 switch (k)
                 {
-                    case 6: Console.WriteLine("Шестёрка");
-                        break;
-                    case 7: Console.WriteLine("Семёрка");
-                        break;
-                    case 8: Console.WriteLine("Восьмёрка");
-                        break;
-                    case 9: Console.WriteLine("Девятка");
-                        break;
-                    case 10: Console.WriteLine("Десятка");
-                        break;
-                    case 11: Console.WriteLine("Валет");
-                        break;
-                    case 12: Console.WriteLine("Дама");
-                        break;
-                    case 13: Console.WriteLine("Король");
-                        break;
-                    case 14: Console.WriteLine("Туз");
-                        break;
+                    case 6: Console.WriteLine("Шестёрка"); break;
+                    case 7: Console.WriteLine("Семёрка"); break;
+                    case 8: Console.WriteLine("Восьмёрка"); break;
+                    case 9:Console.WriteLine("Девятка"); break;
+                    case 10: Console.WriteLine("Десятка"); break;
+                    case 11: Console.WriteLine("Валет"); break;
+                    case 12: Console.WriteLine("Дама"); break;
+                    case 13: Console.WriteLine("Король"); break;
+                    case 14: Console.WriteLine("Туз"); break;
                 }
             }
         }
@@ -89,34 +90,32 @@ class Program
         {
             Console.WriteLine("Неверный ввод");
         }
-
+    }
+    static void Task3()
+    {
         Console.WriteLine("3.");
+        Console.WriteLine("Введите название:");
         string input = Console.ReadLine();
         input = input[0].ToString().ToUpper() + input.Substring(1).ToLower();
         switch (input)
         {
-            case "Jabroni": Console.WriteLine("Parton Tequila");
-                break;
-            case "School Counselor": Console.WriteLine("Anything with Alchogol");
-                break;
-            case "Programmer": Console.WriteLine("Hipster Craft Beer");
-                break;
-            case "Bike Gang Member": Console.WriteLine("Moonshine");
-                break;
-            case "Politician": Console.WriteLine("Your tax dollars");
-                break;
-            case "Rapper": Console.WriteLine("Cristal");
-                break;
-            default: Console.WriteLine("Beer");
-                break;
+            case "Jabroni": Console.WriteLine("Parton Tequila"); break;
+            case "School Counselor": Console.WriteLine("Anything with Alchogol"); break;
+            case "Programmer": Console.WriteLine("Hipster Craft Beer"); break;
+            case "Bike Gang Member": Console.WriteLine("Moonshine"); break;
+            case "Politician": Console.WriteLine("Your tax dollars"); break;
+            case "Rapper": Console.WriteLine("Cristal"); break;
+            default: Console.WriteLine("Beer"); break;
         }
-        
+    }
+    static void Task4()
+    {
         Console.WriteLine("4.");
         try
         {
             Console.WriteLine("Введите число от 1 до 7:");
             int day = Convert.ToInt32(Console.ReadLine());
-            
+
             if (day < 1 | day > 7)
             {
                 throw new FormatException();
@@ -126,11 +125,13 @@ class Program
                 Console.WriteLine((NameOfDay)day);
             }
         }
-        catch(FormatException)
+        catch (FormatException)
         {
             Console.WriteLine("Неверный ввод");
         }
-        
+    }
+    static void Task5()
+    {
         Console.WriteLine("5.");
         string[] toys = ["Hello Kitty", "Transformer", "My Little Pony", "Hello Kitty", "Barbie doll", "Lego", "Duplo", "Hot Wheels", "Barbie doll"];
         int result = 0;

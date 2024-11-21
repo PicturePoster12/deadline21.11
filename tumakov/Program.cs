@@ -1,28 +1,43 @@
 ﻿using System;
 class Laba
 {
+    static int[] daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    static string[] months = [" января", " февраля", " марта", " апреля", " мая", " июня", " июля", " августа", " сентября", " октября", " ноября", " декабря"];
     static void Main()
     {
-        Console.WriteLine("4.1");
-        int[] daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        string[] months = [" января", " февраля", " марта", " апреля", " мая", " июня", " июля", " августа", " сентября", " октября", " ноября", " декабря"];
-        Console.WriteLine("Введите число от 1 до 365:");
-        int monthDays1 = Convert.ToInt32(Console.ReadLine());
-        for (int i = 0; i < 12; ++i)
+        Task1();
+        Task2();
+        Task3();
+    }
+    static void Task1()
+    {
+        try
         {
-            if (monthDays1 > daysInMonth[i])
+            Console.WriteLine("4.1");
+            Console.WriteLine("Введите число от 1 до 365:");
+            int monthDays1 = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < 12; ++i)
             {
-                monthDays1 -= daysInMonth[i];
-            }
-            else
-            {
-                Console.WriteLine(monthDays1 + months[i]);
-                break;
+                if (monthDays1 > daysInMonth[i])
+                {
+                    monthDays1 -= daysInMonth[i];
+                }
+                else
+                {
+                    Console.WriteLine(monthDays1 + months[i]);
+                    break;
+                }
             }
         }
-
+        catch (FormatException)
+        {
+            Console.WriteLine("Неверный ввод");
+        }
+    }
+    static void Task2()
+    {
         Console.WriteLine("4.2");
-        try 
+        try
         {
             Console.WriteLine("Введите число от 1 до 365:");
             int monthDays2 = Convert.ToInt32(Console.ReadLine());
@@ -50,7 +65,9 @@ class Laba
         {
             Console.WriteLine("Неверный ввод");
         }
-
+    }
+    static void Task3()
+    {
         Console.WriteLine("dz4.1");
         try
         {
