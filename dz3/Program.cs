@@ -119,14 +119,14 @@ class Program
             
             if (day < 1 | day > 7)
             {
-                throw new Exception();
+                throw new FormatException();
             }
             else
             {
                 Console.WriteLine((NameOfDay)day);
             }
         }
-        catch
+        catch(FormatException)
         {
             Console.WriteLine("Неверный ввод");
         }
